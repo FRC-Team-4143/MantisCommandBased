@@ -14,7 +14,7 @@ public class DriveWithController extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        driveTrain.arcadeDrive(-1 * oi.xbox.getY(GenericHID.Hand.kLeft), oi.xbox.getX(GenericHID.Hand.kLeft));
+        driveTrain.arcadeDrive(-1 * oi.xbox.getY(GenericHID.Hand.kLeft), oi.xbox.getX(GenericHID.Hand.kLeft), true);
     }
 
     // Make this return true when this Command no longer needs to run execute()
