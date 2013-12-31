@@ -49,4 +49,12 @@ public class DriveTrain extends Subsystem {
         leftEncoder.reset();
         rightEncoder.reset();
     }
+    
+    public void driveForward(double clicks) {
+        reset();
+        while (leftEncoder.getDistance() < clicks && rightEncoder.getDistance() < clicks) {
+            train.drive(0.5, 0);
+        }
+        train.drive(0, 0);
+    }
 }

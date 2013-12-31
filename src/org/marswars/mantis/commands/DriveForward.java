@@ -1,15 +1,11 @@
 package org.marswars.mantis.commands;
 
-import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.GenericHID;
 
-/**
- *
- * @author dquam
- */
-public class FlapWings extends CommandBase {
+public class DriveForward extends CommandBase {
 
-    public FlapWings() {
-        requires(wings);
+    public DriveForward() {
+        requires(driveTrain);
     }
 
     // Called just before this Command runs the first time
@@ -18,10 +14,7 @@ public class FlapWings extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        wings.extend();
-        Timer.delay(0.5);
-        wings.tuck();
-        Timer.delay(0.5);
+        driveTrain.driveForward(10.);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -31,12 +24,10 @@ public class FlapWings extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
-        wings.tuck(); 
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        wings.tuck();
     }
 }
