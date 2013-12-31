@@ -21,6 +21,7 @@ public class DriveTrain extends Subsystem {
     public DriveTrain() {
         leftEncoder.setDistancePerPulse(RobotMap.angularToLinear / RobotMap.pulsesPerRevolution);
         rightEncoder.setDistancePerPulse(RobotMap.angularToLinear / RobotMap.pulsesPerRevolution);
+        start();
     }
 
     public void initDefaultCommand() {
@@ -34,7 +35,7 @@ public class DriveTrain extends Subsystem {
         }
     }
 
-    public void start() {
+    private void start() {
         leftEncoder.start();
         leftEncoder.start();
     }
