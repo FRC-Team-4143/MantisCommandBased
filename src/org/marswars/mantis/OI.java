@@ -4,6 +4,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.marswars.mantis.commands.DumpDumper;
 import org.marswars.mantis.commands.FlapWings;
 import org.marswars.mantis.commands.LoadDumper;
+import org.marswars.mantis.commands.ClimberExtend;
+import org.marswars.mantis.commands.ClimberRetract;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -44,5 +46,8 @@ public class OI {
         new JoystickButton(xbox, XboxController.ButtonType.kA.value).whileHeld(new LoadDumper());
         new JoystickButton(xbox, XboxController.ButtonType.kB.value).whileHeld(new DumpDumper());
         new JoystickButton(xbox, XboxController.ButtonType.kX.value).whileHeld(new FlapWings());
+        new JoystickButton(xbox, XboxController.ButtonType.kR.value).whileHeld(new ClimberExtend());
+        new JoystickButton(xbox, XboxController.ButtonType.kL.value).whileHeld(new FlapWings());
     }
+    
 }

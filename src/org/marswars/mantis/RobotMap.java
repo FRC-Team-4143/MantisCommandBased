@@ -10,6 +10,8 @@ public class RobotMap {
 
     public static final int leftSpeedController = 1;
     public static final int rightSpeedController = 2;
+    public static final int leftClimberController = 3;
+    public static final int rightClimberController = 4;
     public static final int lidServo = 4;
     public static final int rightWingServo = 5;
     public static final int leftWingServo = 6;
