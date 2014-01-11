@@ -12,32 +12,26 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class ClimberExtend extends CommandBase {
 
-    public ClimberExtend () {
+    public ClimberExtend() {
         requires(climber);
     }
-    
+
     protected void initialize() {
-        
     }
 
     protected void execute() {
         climber.extend();
-        Timer.delay(.5);
     }
 
     protected boolean isFinished() {
         return false;
     }
-        
+
     protected void end() {
-       
+        climber.stop();
     }
 
     protected void interrupted() {
-        
-        
+        climber.stop();
     }
-        
-    
-    
 }

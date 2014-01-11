@@ -22,7 +22,6 @@ public class ClimberRetract extends CommandBase {
 
     protected void execute() {
         climber.retract();
-        Timer.delay(.5);
     }
 
     protected boolean isFinished() {
@@ -30,12 +29,11 @@ public class ClimberRetract extends CommandBase {
     }
         
     protected void end() {
-       
+       climber.stop();
     }
 
     protected void interrupted() {
-        
-        
+        climber.stop();
     }
         
     

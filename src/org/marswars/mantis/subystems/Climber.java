@@ -15,8 +15,8 @@ import org.marswars.mantis.RobotMap;
  */
 public class Climber extends Subsystem {
 
-    private Jaguar leftClimber = new Jaguar(RobotMap.leftClimberController);
-    private Jaguar rightClimber = new Jaguar(RobotMap.rightClimberController);
+    private Jaguar Climber = new Jaguar(RobotMap.ClimberController);
+    
     
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
@@ -24,12 +24,15 @@ public class Climber extends Subsystem {
     }
 
     public void extend() {
-        leftClimber.set(.5);
-        rightClimber.set(.5);
+        Climber.set(.5);
+        
     }
 
     public void retract() {
-        leftClimber.set(-.5);
-        rightClimber.set(-.5);
+        Climber.set(-.5);       
+    }
+    
+    public void stop() {
+        Climber.set(0);       
     }
 }

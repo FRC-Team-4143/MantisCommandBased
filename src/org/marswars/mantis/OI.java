@@ -46,7 +46,8 @@ public class OI {
         new JoystickButton(xbox, XboxController.ButtonType.kA.value).whileHeld(new LoadDumper());
         new JoystickButton(xbox, XboxController.ButtonType.kB.value).whileHeld(new DumpDumper());
         new JoystickButton(xbox, XboxController.ButtonType.kX.value).whileHeld(new FlapWings());
-        new JoystickButton(xbox, XboxController.ButtonType.kR.value).whileHeld(new ClimberExtend());
+        new JoystickButton(xbox, XboxController.ButtonType.kLTrigger.value).whileHeld(new ClimberExtend());
+        new JoystickButton(xbox, XboxController.ButtonType.kRTrigger.value).whileHeld(new ClimberRetract()); 
         new JoystickButton(xbox, XboxController.ButtonType.kL.value).whileHeld(new FlapWings());
     }
     
