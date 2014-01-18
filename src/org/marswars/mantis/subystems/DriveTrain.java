@@ -29,7 +29,7 @@ public class DriveTrain extends Subsystem {
     }
 
     public void arcadeDrive(double Y, double X, boolean printOut) {
-        train.arcadeDrive(Y, X);
+        train.arcadeDrive(Y, -X);
         if (printOut) {
             printDistance();
         }

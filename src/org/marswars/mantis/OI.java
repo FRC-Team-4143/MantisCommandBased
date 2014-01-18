@@ -6,6 +6,8 @@ import org.marswars.mantis.commands.FlapWings;
 import org.marswars.mantis.commands.LoadDumper;
 import org.marswars.mantis.commands.ClimberExtend;
 import org.marswars.mantis.commands.ClimberRetract;
+import org.marswars.mantis.commands.WinchTiltBackward;
+import org.marswars.mantis.commands.WinchTiltForward;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -48,7 +50,8 @@ public class OI {
         new JoystickButton(xbox, XboxController.ButtonType.kX.value).whileHeld(new FlapWings());
         new JoystickButton(xbox, XboxController.ButtonType.kLTrigger.value).whileHeld(new ClimberExtend());
         new JoystickButton(xbox, XboxController.ButtonType.kRTrigger.value).whileHeld(new ClimberRetract()); 
-        new JoystickButton(xbox, XboxController.ButtonType.kL.value).whileHeld(new FlapWings());
+        new JoystickButton(xbox, XboxController.ButtonType.kL.value).whileHeld(new WinchTiltBackward());
+        new JoystickButton(xbox, XboxController.ButtonType.kR.value).whileHeld(new WinchTiltForward());
     }
     
 }
